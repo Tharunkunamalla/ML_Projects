@@ -17,7 +17,7 @@ def clean_states(df, col="States"):
 output_folder = "phonepe_extracted_csv"
 os.makedirs(output_folder, exist_ok=True)
 
-# ------------------ AGGREGATED TRANSACTION ------------------ #
+# - AGGREGATED TRANSACTION 
 path1 = os.path.join(base_path, "aggregated/transaction/country/india/state")
 columns1 = {"States":[], "Years":[], "Quarter":[], "Transaction_type":[], "Transaction_count":[],"Transaction_amount":[] }
 
@@ -40,7 +40,7 @@ df1 = pd.DataFrame(columns1)
 df1 = clean_states(df1)
 df1.to_csv(f"{output_folder}/aggregated_transaction.csv", index=False)
 
-# ------------------ AGGREGATED USER ------------------ #
+# - AGGREGATED USER 
 path2 = os.path.join(base_path, "aggregated/user/country/india/state")
 columns2 = {"States":[], "Years":[], "Quarter":[], "Brands":[],"Transaction_count":[], "Percentage":[] }
 
@@ -66,7 +66,7 @@ df2 = pd.DataFrame(columns2)
 df2 = clean_states(df2)
 df2.to_csv(f"{output_folder}/aggregated_user.csv", index=False)
 
-# ------------------ AGGREGATED INSURANCE ------------------ #
+# - AGGREGATED INSURANCE 
 path3 = os.path.join(base_path, "aggregated/insurance/country/india/state")
 columns3 = {"States":[], "Years":[], "Quarter":[], "Insurance_type":[], "Insurance_count":[],"Insurance_amount":[] }
 
@@ -89,7 +89,7 @@ df3 = pd.DataFrame(columns3)
 df3 = clean_states(df3)
 df3.to_csv(f"{output_folder}/aggregated_insurance.csv", index=False)
 
-# ------------------ MAP TRANSACTION ------------------ #
+# - MAP TRANSACTION 
 path4 = os.path.join(base_path, "map/transaction/hover/country/india/state")
 columns4 = {"States":[], "Years":[], "Quarter":[],"District":[], "Transaction_count":[],"Transaction_amount":[]}
 
@@ -112,7 +112,7 @@ df4 = pd.DataFrame(columns4)
 df4 = clean_states(df4)
 df4.to_csv(f"{output_folder}/map_transaction.csv", index=False)
 
-# ------------------ MAP USER ------------------ #
+# - MAP USER 
 path5 = os.path.join(base_path, "map/user/hover/country/india/state")
 columns5 = {"States":[], "Years":[], "Quarter":[], "Districts":[], "RegisteredUser":[], "AppOpens":[] }
 
@@ -135,7 +135,7 @@ df5 = pd.DataFrame(columns5)
 df5 = clean_states(df5)
 df5.to_csv(f"{output_folder}/map_user.csv", index=False)
 
-# ------------------ MAP INSURANCE ------------------ #
+# - MAP INSURANCE 
 path6 = os.path.join(base_path, "map/insurance/hover/country/india/state")
 columns6 = {"States":[], "Years":[], "Quarter":[], "Districts":[], "Transaction_count":[],"Transaction_amount":[] }
 
@@ -158,7 +158,7 @@ df6 = pd.DataFrame(columns6)
 df6 = clean_states(df6)
 df6.to_csv(f"{output_folder}/map_insurance.csv", index=False)
 
-# ------------------ TOP TRANSACTION ------------------ #
+# - TOP TRANSACTION 
 path7 = os.path.join(base_path, "top/transaction/country/india/state")
 columns7 = {"States":[], "Years":[], "Quarter":[], "Pincodes":[], "Transaction_count":[],"Transaction_amount":[]}
 
@@ -181,7 +181,7 @@ df7 = pd.DataFrame(columns7)
 df7 = clean_states(df7)
 df7.to_csv(f"{output_folder}/top_transaction.csv", index=False)
 
-# ------------------ TOP USER ------------------ #
+# - TOP USER 
 path8 = os.path.join(base_path, "top/user/country/india/state")
 columns8 = {"States":[], "Years":[], "Quarter":[], "Pincodes":[], "RegisteredUser":[]}
 
@@ -203,7 +203,7 @@ df8 = pd.DataFrame(columns8)
 df8 = clean_states(df8)
 df8.to_csv(f"{output_folder}/top_user.csv", index=False)
 
-# ------------------ TOP INSURANCE ------------------ #
+# - TOP INSURANCE 
 path9 = os.path.join(base_path, "top/insurance/country/india/state")
 columns9 = {"States":[], "Years":[], "Quarter":[], "Pincodes":[], "Transaction_count":[], "Transaction_amount":[]}
 
