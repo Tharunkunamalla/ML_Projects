@@ -2,3 +2,5 @@ Created... files and folders accordingly
 data preprocessing done ✅
 Linked Mysql to code done ✅
 Adding data to the database done ✅
+//
+Added plotly + stream app
